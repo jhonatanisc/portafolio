@@ -185,7 +185,22 @@
     </div>
     <div class="container" id="solutions">
         <section class="section-content"><span class="sub-title">Portafolio</span>
-        
+            <div class="gallery">
+
+                <span class="title-gallery">Sitio de Firmado de Archivos</span>
+                <img id="myImg2" onclick="openModal(this.id)" src="img/Login.PNG" alt="Modal para cargar un archivo" >
+                <img id="myImg" onclick="openModal(this.id)" src="img/Sitio de carga de archivos.PNG" alt="Sitio de carga y manejo de archivos" >
+                <img id="myImg24" onclick="openModal(this.id)" src="img/Carga de documento.PNG" alt="Modal para cargar un archivo" >
+                <img id="myImg23" onclick="openModal(this.id)" src="img/Sitio firmante.PNG" alt="Sitio del Firmante" >
+            </div>
+            
+            <div class="gallery">
+                <span class="title-gallery">Inventario Movil</span>
+                <img id="myImg2ff" onclick="openModal(this.id)" src="img/Datos de usuario.jpg" alt="Modal para crar un perfil" >
+                <img id="myImgff" onclick="openModal(this.id)" src="img/nueva seccion.jpeg" alt="Nueva sección o categoria" >
+                <img id="myImg2ff4" onclick="openModal(this.id)" src="img/nuevo producto.jpeg" alt="Nuevo producto" >
+                <img id="myImg2ff3" onclick="openModal(this.id)" src="img/escaneo cod.jpeg" alt="Escaneo de codigo de barras">
+            </div>
             
 
         </section>
@@ -194,19 +209,25 @@
     <div class="container" id="contact">
         <section class="section-content"><span class="sub-title">Contacto</span>
         
-            <form name="contact" id="contact-form" class="contact-item">
-                <label for="name">Nombre:</label>
-                <input type="text" name="name" class="input-contact"/>
-                <label for="enterprise">Empresa:</label>
-                <input type="text" name="enterprise" class="input-contact"/>
-                <label for="mail">Email:</label>
-                <input type="email" name="mail" class="input-contact"/>
-                <label for="question">Haz una pregunta:</label>
-                <textarea type="text" name="question" class="input-contact"></textarea>
-                <div style="width: 100%; text-align: right;"><input type="submit" class="btn-submit" ></input></div>
-            </form>
+            
+            
             <div id="wa-contact" class="contact-item">
-                <p style="color: #0a0a0a;">Si lo prefieres</p>
+                <div class="contact-card">
+                    <div class="banner">
+                       <div class="avatar"></div>
+                    </div>
+                     <h3>Jhonatan Vazquez</h3>
+                    <a href="mailto:eric.jhonatanvazquez@gmail.com">📧 eric.jhonatanvazquez@gmail.com</a>
+                    <a href="#">📱 56 14 13 50 84</a>
+                     <ul>
+                       <a href="https://twitter.com/Jhonatan_isc" target="_blank"><i class="fa fa-twitter" style="font-size:16px"></i></a>
+                        <a href="https://www.linkedin.com/in/eric-jhonatan-vazquez-gomez-b9a752183" target="_blank"><i class="fa fa-linkedin" style="font-size:16px"></i></a>
+                       <a href="https://www.instagram.com/Jhonatan_isc/" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"  style="font-size:16px"></i></a>
+                       <a href="https://www.facebook.com/jhonatan.vazquez.5682" target="_blank"><i class="fa fa-facebook" style="font-size:16px"></i></a>
+                     </ul>
+                 </div>
+
+                <p style="color: #ffffff;">Si lo prefieres</p>
                 <a href="whatsapp://send?text=Hola&phone=+525614135084&abid=Jhonatan" id="btn-wa"><i class="fa fa-whatsapp" aria-hidden="true"  style="margin-right: 5px;"></i>Escríbeme en WhatsApp</a>
             </div>
            
@@ -215,6 +236,47 @@
 
     <footer>Designed with &#10084; by Jhonatan Vazquez<span class="blink_me" id="rotate">_</span></footer>
 
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+      
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+      
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+      </div>
 </body>
+
+
+
+<script>
+    // Get the modal
+   
+
+    function openModal (element){
+        var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById(element);
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+
+    }
+    </script>
 
 </html>

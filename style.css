@@ -454,3 +454,207 @@ footer{
 	100% { -moz-transform: -moz-translateZ(-288px) rotateY(360deg);    }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .gallery{
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
+    }
+    .title-gallery{
+        font-size: 1.5em;
+   color:rgb(90, 40, 131);
+    margin-bottom: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    display: block;
+    }
+
+    .gallery img{
+        box-shadow: rgba(0, 0, 0, 0.212) 5px 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        max-height: 500px;
+        max-width: 300px;
+        transition: 0.3s;
+        margin: 5px;
+      }
+      
+      .gallery img:hover {opacity: 0.7;}
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+      
+      /* Modal Content (Image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 1000px;
+      }
+      
+      /* Caption of Modal Image (Image Text) - Same Width as the Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+      
+      /* Add Animation - Zoom in the Modal */
+      .modal-content, #caption {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      
+      @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+      }
+      
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .contact-card{
+        overflow: hidden;
+        background-color: #FFFFFF;
+       
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.212) 5px 5px 10px;
+        text-align: center;
+        -webkit-transition: .1s ease-in-out;
+        transition: .1s ease-in-out;
+    }
+        .contact-card:first-of-type{
+            margin-right: 25px;
+        }
+     
+        
+    .banner{
+        height: 100px;
+        width: 100%;
+        padding-top: 30px;
+        background-color: #FAFAFA;
+        background-size: cover;
+        background-position: center;
+    }
+    .contact-card .banner{
+            
+        }
+    .avatar{
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        background-size: cover;
+        background-position: center;
+        background-color: #F1F1F1;
+        border-radius: 100%;
+    }
+    .contact-card .avatar{
+            background-image: url("img/avatar.png");
+        }
+     
+        .contact-card h3, .contact-card a, .contact-card i{
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        -webkit-transition: .1s ease-in-out;
+        transition: .1s ease-in-out;
+    }
+    .contact-card h3{
+            margin-top: 45px;
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #212121;
+        }
+        .contact-card a {
+            display: block;
+            padding: 5px 0px;
+            font-size: 14px;
+            color: #9E9E9E;
+            text-decoration: none;
+        }
+        .contact-card  a:hover{
+            background-color: #3a3a3a;
+            color: inherit;
+            }
+            .contact-card ul {
+        margin-top: 10px;
+        padding: 15px 0px;
+        background-color: #FAFAFA;
+    }
+    .contact-card ul a{
+            display: inline;
+            margin-right: 10px;
+        }
+        .contact-card ul a i:hover{
+            transform: scale(1.5);
+            color: #2ab1ce;
+            background-color: transparent;
+            }
