@@ -67,14 +67,14 @@ body {
 
 
 .title {
-    font-size: 10em;
+    font-size: 5em;
     font-family: 'NTR', sans-serif;
     display: block;
 }
 
 .slogan {
     font-size: 1.5em;
-    margin-top: -100px;
+    margin-top: -50px;
     margin-bottom: 15px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
@@ -185,7 +185,7 @@ p {
     border-radius: 5px;
     padding: 0px 20px;
     margin: 10px;
-    max-width: 350px;
+    width: 350px;
     min-height: 450px;
 }
 .title-card{
@@ -248,15 +248,21 @@ p {
     max-width: 1000px;
     margin: 0 auto;
 }
+.section-special{
+    width: 80%;
+    max-width: 1000px;
+    min-height: 0px !important;
+    margin: 0 auto;
+}
 
 #services, #contact{
     color: white;
-    background: repeating-linear-gradient(10deg, rgb(230, 230, 230), rgb(230, 230, 230) 50%, rgb(144, 53, 219) 0%, rgb(144, 53, 219));
+    background: repeating-linear-gradient(10deg,rgb(90, 40, 131), rgb(90, 40, 131) 50%, rgb(144, 53, 219) 0%, rgb(144, 53, 219));
 }
 
 #about, #solutions{
     color: rgb(144, 53, 219);
-    background: repeating-linear-gradient(170deg, rgb(230, 230, 230),  rgb(230, 230, 230) 50%, rgb(144, 53, 219) 0%,  rgb(144, 53, 219));
+    background: repeating-linear-gradient(170deg, rgb(230, 230, 230),  rgb(230, 230, 230) 50%,rgb(184, 184, 184) 0%, rgb(184, 184, 184));
 }
         
 p{
@@ -343,4 +349,108 @@ footer{
     margin-bottom: 20px;
 }
 
+.carousel-container {
+
+    width: 100%;
+    background-color:transparent;
+    height: 10px;
+    position: relative;
+    margin: 0 auto 40px;
+    perspective: 3000px;
+}
+#carousel {
+    width: 100%;
+    position: absolute;
+    -webkit-transform: translateZ( -288px );
+       -moz-transform: translateZ( -288px );
+            transform: translateZ( -288px );
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+       -moz-transition: -moz-transform 1s;
+            transition: transform 1s;
+      -webkit-animation: rotateInY 40s infinite linear;
+      -moz-animation: rotateInY 40s infinite linear;
+      animation: rotateInY 40s infinite linear;
+  }
+
+  
+    #carousel figure {
+        border: 2px dotted rgba(255, 255, 255, 0.089) ;
+        font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 10px;
+        top: 10px;
+        line-height: 20px;
+        text-align: center;
+        margin: 0;
+        text-align: center;
+      }
+    
+
+    #carousel figure:nth-child(1) {
+      -webkit-transform: rotateY(   0deg ) translateZ( 288px );
+         -moz-transform: rotateY(   0deg ) translateZ( 288px );
+              transform: rotateY(   0deg ) translateZ( 288px );
+    }
+    #carousel figure:nth-child(2) {
+      -webkit-transform: rotateY(  40deg ) translateZ( 288px );
+         -moz-transform: rotateY(  40deg ) translateZ( 288px );
+              transform: rotateY(  40deg ) translateZ( 288px );
+    }
+    #carousel figure:nth-child(3) {
+      -webkit-transform: rotateY(  80deg ) translateZ( 288px );
+         -moz-transform: rotateY(  80deg ) translateZ( 288px );
+              transform: rotateY(  80deg ) translateZ( 288px );
+    }
+    #carousel figure:nth-child(4) {
+      -webkit-transform: rotateY( 120deg ) translateZ( 288px );
+         -moz-transform: rotateY( 120deg ) translateZ( 288px );
+              transform: rotateY( 120deg ) translateZ( 288px );
+    }
+    #carousel figure:nth-child(5) {
+      -webkit-transform: rotateY( 160deg ) translateZ( 288px );
+         -moz-transform: rotateY( 160deg ) translateZ( 288px );
+              transform: rotateY( 160deg ) translateZ( 288px );
+    }
+    #carousel figure:nth-child(6) {
+      -webkit-transform: rotateY( 200deg ) translateZ( 288px );
+         -moz-transform: rotateY( 200deg ) translateZ( 288px );
+              transform: rotateY( 200deg ) translateZ( 288px );
+    }
+    #carousel figure:nth-child(7) {
+      -webkit-transform: rotateY( 240deg ) translateZ( 288px );
+         -moz-transform: rotateY( 240deg ) translateZ( 288px );
+              transform: rotateY( 240deg ) translateZ( 288px );
+    }
+    #carousel figure:nth-child(8) {
+      -webkit-transform: rotateY( 280deg ) translateZ( 288px );
+         -moz-transform: rotateY( 280deg ) translateZ( 288px );
+              transform: rotateY( 280deg ) translateZ( 288px );
+    }
+    #carousel figure:nth-child(9) {
+      -webkit-transform: rotateY( 320deg ) translateZ( 288px );
+         -moz-transform: rotateY( 320deg ) translateZ( 288px );
+              transform: rotateY( 320deg ) translateZ( 288px );
+    }
+
+    @keyframes rotateInY {
+	0%   { transform: translateZ(-288px) rotateY(0deg);   }
+	100% { transform: translateZ(-288px) rotateY(360deg);    }
+    }
+
+    @-webkit-keyframes rotateInY {
+	0%   { -webkit-transform: -webkit-translateZ(-288px) rotateY(0deg);   }
+	100% { -webkit-transform: -webkit-translateZ(-288px) rotateY(360deg);    }
+    }
+
+    @-moz-keyframes rotateInY {
+	0%   { -moz-transform: -moz-translateZ(-288px) rotateY(0deg);   }
+	100% { -moz-transform: -moz-translateZ(-288px) rotateY(360deg);    }
+    }
 

@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=NTR&display=swap""
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <title>devej_</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Jhonatan Vazquez</title>
     <script>
         $(document).ready(function () { //Hacia arriba
             irArriba();
@@ -39,6 +37,8 @@
         function showServices() {
             $(window).scroll(function () {
                 if ($(this).scrollTop() >= $('#services').offset().top - (($(window).height() / 2))) {
+                    
+
                     $('.card').first().fadeIn(800, function showNext() {
                         $(this).next(".card").fadeIn(800, showNext);
                     });
@@ -67,21 +67,21 @@
     </a>
     <header>
         <div class="img-background"></div>
-        <div class="menu-content">
+        <!--<div class="menu-content">
             <a onclick="go_to('#about')" href="javascript:void(0);"><i class="fa fa-facebook-official "
                     style="margin-right: 5px; color: #3B5998;" aria-hidden="true"></i>Facebook</a>
             <a onclick="go_to('#solutions')" href="javascript:void(0);"><i class="fa fa-youtube-play "
                     style=" margin-right: 5px; color: #C4302B;" aria-hidden="true"></i>Youtube</a>
             <a onclick="go_to('#briefcase')" href="javascript:void(0);"><i class="fa fa-rss"
                     style="margin-right: 5px; color: #ffbb00;" aria-hidden="true"></i>Blog</a>
-        </div>
+        </div>-->
         <div id="vertical-center" class="main-title">
-            <span class="title">devej<span class="blink_me" id="rotate">_</span></span>
-            <span class="slogan">Desarrollo de software a medida</span>
+            <span class="title">Jhonatan V<span class="blink_me" id="rotate">_</span></span>
+            <span class="slogan">JR Developer</span>
             <div class="menu">
                 <a onclick="go_to('#about')" href="javascript:void(0);">Acerca de</a>
-                <a onclick="go_to('#services')" href="javascript:void(0);">Servicios</a>
-                <a onclick="go_to('#solutions')" href="javascript:void(0);">Soluciones</a>
+                <a onclick="go_to('#services')" href="javascript:void(0);">Skills</a>
+                <a onclick="go_to('#solutions')" href="javascript:void(0);">Portafolio</a>
                 <a onclick="go_to('#contact')" href="javascript:void(0);">Contacto</a>
             </div>
         </div>
@@ -94,21 +94,21 @@
             <div class="vertical-center">
                 <img src='img/avatar.png' class='circle-img' />
                 <br />
-                <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum</p>
+                <p style="color: rgb(27, 27, 27);">Crear, Aprender, Investigar, Innovar, Optimizar, Intentar. Éstas son mis actividades favoritas y las pongo en práctica realizando proyectos de Desarrollo Web, creando Software de calidad y alta funcionalidad optimizando desde tareas y actividades cotidianas hasta operaciones complejas a nivel profesional, laboral y empresarial. </p>
+                <br>
+                <p style="color: rgb(27, 27, 27);">Mis estudios en Ingeniería en Sistemas Computacionales me han guiado a obtener grandes experiencias y aprendizajes dentro de esta área y así tener la oportunidad de aplicar todos aquellos conocimientos en proyectos laborales y personales.</p>
+                <br>
+                <p style="color: rgb(27, 27, 27);">Es por ello que a través de este espacio decido compartir un poco de mi trabajo para crear soluciones a todo aquel que las requiera.</p>
+                </p>
             </div>
             <br />
 
         </section>
     </div>
     <div class="container" id="services">
-        <section class="section-content"><span class="sub-title">Servicios</span>
+        <section class="section-special"><span class="sub-title">Skills</span></section>
+        <iframe class="carruselframe" src="carrusel.html" scrolling="no" style="height:250px; width: 100%; overflow:hidden; border: 0; background-color: transparent;"></iframe>
+        <section class="section-content">
             <div class="cards">
                 <div class="card web">
                     <div class="title-card">
@@ -120,10 +120,11 @@
                             <i class="fa fa-html5 fa-stack-1x" style="color: #EC6231;" aria-hidden="true"></i>
                         </span>
                         <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Paginas Web</li>
+                            <li>E-Commerce</li>
+                            <li>Gestion de contendios (CMS)</li>
+                            <li>Integracion de Google Maps API</li>
+                            <li>Firebase</li>
                         </ul>
                     </div>
                 </div>
@@ -137,11 +138,10 @@
                             <i class="fa fa-android fa-stack-1x" style="color: #A4C639;" aria-hidden="true"></i>
                         </span>
                         <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Aplicaciones a medida</li>
+                            <li>Integracion con IoT</li>
+                            <li>Integracion de Google Maps API</li>
+                            <li>Firebase</li>
                         </ul>
                     </div>
                 </div>
@@ -155,17 +155,16 @@
                             <i class="fa fa-code fa-stack-1x" style="color: #6E0101;" aria-hidden="true"></i>
                         </span>
                         <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet,
-                                consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Aplicaciones de escritorio</li>
+                            <li>Web services (Rest o Soap)</li>
+                            <li>Servicios en segundo plano</li>
+                            <li>Firebase</li>
                         </ul>
                     </div>
                 </div>
                 <div class="card iot">
                     <div class="title-card">
-                        <span class="text-title-card">IOT</span>
+                        <span class="text-title-card">Cyberseguridad</span>
                     </div>
                     <div class="content-card">
                         <span class="fa-stack fa-3x">
@@ -174,20 +173,24 @@
                                 aria-hidden="true"></i>
                         </span>
                         <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit</li>
+                            <li>Integracion de Lectores biometricos</li>
+                            <li>Criptografia</li>
+                            <li>Firma electronica</li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
         </section>
     </div>
     <div class="container" id="solutions">
-        <section class="section-content"><span class="sub-title">Soluciones</span></section>
+        <section class="section-content"><span class="sub-title">Portafolio</span>
+        
+            
+
+        </section>
     </div>
+
     <div class="container" id="contact">
         <section class="section-content"><span class="sub-title">Contacto</span>
         
@@ -210,7 +213,7 @@
         </section>
     </div>
 
-    <footer>Designed with &#10084; by devej<span class="blink_me" id="rotate">_</span></footer>
+    <footer>Designed with &#10084; by Jhonatan Vazquez<span class="blink_me" id="rotate">_</span></footer>
 
 </body>
 
