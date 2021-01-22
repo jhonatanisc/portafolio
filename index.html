@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=NTR&display=swap""
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>devej_</title>
+    <script>
+        $(document).ready(function () { //Hacia arriba
+            irArriba();
+            showAbout();
+            showServices();
+            showContact();
+        });
+
+        function irArriba() {
+            $('.ir-arriba').click(function () { $('body,html').animate({ scrollTop: '0px' }, 1000); });
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) { $('.ir-arriba').slideDown(600); } else { $('.ir-arriba').slideUp(600); }
+            });
+            $('.ir-abajo').click(function () { $('body,html').animate({ scrollTop: '1000px' }, 800); });
+        }
+        function go_to(where) {
+            $('body,html').animate({ scrollTop: $(where).offset().top }, 800);
+        }
+
+        function showAbout() {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= $('#about').offset().top - (($(window).height() / 2))) { $('.vertical-center').slideDown(600); } else { if ($(this).scrollTop() == 0) { $('.vertical-center').slideUp(600); } }
+            });
+        }
+        function showServices() {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= $('#services').offset().top - (($(window).height() / 2))) {
+                    $('.card').first().fadeIn(800, function showNext() {
+                        $(this).next(".card").fadeIn(800, showNext);
+                    });
+                    
+                } else { if ($(this).scrollTop() == 0) { $('.card').fadeOut("fast"); } }
+            });
+        }
+        function showContact() {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= $('#contact').offset().top - (($(window).height() / 4))) {
+                    $('.contact-item').show(800);
+                } else { if ($(this).scrollTop() == 0) { $('.contact-item').fadeOut("fast"); } }
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <a class="ir-arriba" javascript:void(0) title="Volver arriba">
+        <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x fa-5x" style="color:  rgb(255, 255, 255);"></i>
+            <i class="fa fa-bars fa-stack-1x" style="color:  rgb(144, 53, 219);"></i>
+        </span>
+    </a>
+    <header>
+        <div class="img-background"></div>
+        <div class="menu-content">
+            <a onclick="go_to('#about')" href="javascript:void(0);"><i class="fa fa-facebook-official "
+                    style="margin-right: 5px; color: #3B5998;" aria-hidden="true"></i>Facebook</a>
+            <a onclick="go_to('#solutions')" href="javascript:void(0);"><i class="fa fa-youtube-play "
+                    style=" margin-right: 5px; color: #C4302B;" aria-hidden="true"></i>Youtube</a>
+            <a onclick="go_to('#briefcase')" href="javascript:void(0);"><i class="fa fa-rss"
+                    style="margin-right: 5px; color: #ffbb00;" aria-hidden="true"></i>Blog</a>
+        </div>
+        <div id="vertical-center" class="main-title">
+            <span class="title">devej<span class="blink_me" id="rotate">_</span></span>
+            <span class="slogan">Desarrollo de software a medida</span>
+            <div class="menu">
+                <a onclick="go_to('#about')" href="javascript:void(0);">Acerca de</a>
+                <a onclick="go_to('#services')" href="javascript:void(0);">Servicios</a>
+                <a onclick="go_to('#solutions')" href="javascript:void(0);">Soluciones</a>
+                <a onclick="go_to('#contact')" href="javascript:void(0);">Contacto</a>
+            </div>
+        </div>
+
+    </header>
+    <div class="container" id="about">
+        <section class="section-content">
+            <span class="sub-title">Acerca de</span>
+
+            <div class="vertical-center">
+                <img src='img/avatar.png' class='circle-img' />
+                <br />
+                <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum</p>
+            </div>
+            <br />
+
+        </section>
+    </div>
+    <div class="container" id="services">
+        <section class="section-content"><span class="sub-title">Servicios</span>
+            <div class="cards">
+                <div class="card web">
+                    <div class="title-card">
+                        <span class="text-title-card">Aplicaciones Web</span>
+                    </div>
+                    <div class="content-card">
+                        <span class="fa-stack fa-3x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-html5 fa-stack-1x" style="color: #EC6231;" aria-hidden="true"></i>
+                        </span>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card android">
+                    <div class="title-card">
+                        <span class="text-title-card"> Android Apps</span>
+                    </div>
+                    <div class="content-card">
+                        <span class="fa-stack fa-3x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-android fa-stack-1x" style="color: #A4C639;" aria-hidden="true"></i>
+                        </span>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card software">
+                    <div class="title-card">
+                        <span class="text-title-card">Software</span>
+                    </div>
+                    <div class="content-card">
+                        <span class="fa-stack fa-3x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-code fa-stack-1x" style="color: #6E0101;" aria-hidden="true"></i>
+                        </span>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet,
+                                consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card iot">
+                    <div class="title-card">
+                        <span class="text-title-card">IOT</span>
+                    </div>
+                    <div class="content-card">
+                        <span class="fa-stack fa-3x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa  fa-microchip fa-rotate-90 fa-stack-1x" style="color: #008184;"
+                                aria-hidden="true"></i>
+                        </span>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container" id="solutions">
+        <section class="section-content"><span class="sub-title">Soluciones</span></section>
+    </div>
+    <div class="container" id="contact">
+        <section class="section-content"><span class="sub-title">Contacto</span>
+        
+            <form name="contact" id="contact-form" class="contact-item">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" class="input-contact"/>
+                <label for="enterprise">Empresa:</label>
+                <input type="text" name="enterprise" class="input-contact"/>
+                <label for="mail">Email:</label>
+                <input type="email" name="mail" class="input-contact"/>
+                <label for="question">Haz una pregunta:</label>
+                <textarea type="text" name="question" class="input-contact"></textarea>
+                <div style="width: 100%; text-align: right;"><input type="submit" class="btn-submit" ></input></div>
+            </form>
+            <div id="wa-contact" class="contact-item">
+                <p style="color: #0a0a0a;">Si lo prefieres</p>
+                <a href="whatsapp://send?text=Hola&phone=+525614135084&abid=Jhonatan" id="btn-wa"><i class="fa fa-whatsapp" aria-hidden="true"  style="margin-right: 5px;"></i>Escríbeme en WhatsApp</a>
+            </div>
+           
+        </section>
+    </div>
+
+    <footer>Designed with &#10084; by devej<span class="blink_me" id="rotate">_</span></footer>
+
+</body>
+
+</html>

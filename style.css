@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+.ir-arriba {
+    display: none;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+html {
+    height: 100%;
+}
+
+section {
+    height: 100%;
+    min-height: 800px;
+    position: relative;
+}
+
+header {
+    
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.img-background {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    background-image: url("img/background_patern.jpg");
+    background-position: center center;
+    filter: blur(4px);
+    opacity: 10%;
+
+}
+
+body {
+    background-color: #fff;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.container {
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+
+
+.title {
+    font-size: 10em;
+    font-family: 'NTR', sans-serif;
+    display: block;
+}
+
+.slogan {
+    font-size: 1.5em;
+    margin-top: -100px;
+    margin-bottom: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    display: block;
+}
+
+.main-title {
+    display: block;
+    color: rgb(144, 53, 219);
+    width: 95%;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+   
+}
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center;
+}
+
+.sub-title {
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3em;
+}
+
+.circle-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    display: block;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.212) 5px 5px 10px;
+
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.menu {
+   
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+.menu-content {
+ 
+    box-sizing: border-box;
+    width: 95%;
+    text-align: end;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.menu a,
+.menu a:visited,
+.menu a:hover {
+    font-size: 1.3em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: rgb(144, 53, 219);
+    text-decoration: none;
+}
+
+.menu-content a {
+    display:inline-block;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+	cursor:pointer;
+    color: rgb(144, 53, 219);
+	padding:9px 15px;
+	text-decoration:none;
+}
+
+.menu-content a:active {
+	position:relative;
+	top:1px;
+}
+
+.card{
+    overflow: auto;
+    box-shadow: rgba(0, 0, 0, 0.212) 5px 5px 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin: 10px;
+    max-width: 350px;
+    min-height: 450px;
+}
+.title-card{
+    text-align: center;
+    margin-top: 10px;
+
+}
+.text-title-card{
+    font-size: 1.3em;
+    font-family: 'Quicksand', sans-serif;
+}
+.card ul{
+    
+    list-style: none;
+    width: 100%;
+}
+
+.content-card{
+    text-align: center;
+}
+
+.card .content-card ul li{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.card .content-card .icon{
+    font-size: 2em;
+}
+.web{
+    background-color: #EC6231;
+    font-weight: 600;
+}
+.android{
+    background-color: #A4C639;
+    font-weight: 600;
+}
+.software{
+    background-color: #6E0101;
+    font-weight: 600;
+}
+.iot{
+    background-color: #008184;
+    font-weight: 600;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section-content{
+    
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#services, #contact{
+    color: white;
+    background: repeating-linear-gradient(10deg, rgb(230, 230, 230), rgb(230, 230, 230) 50%, rgb(144, 53, 219) 0%, rgb(144, 53, 219));
+}
+
+#about, #solutions{
+    color: rgb(144, 53, 219);
+    background: repeating-linear-gradient(170deg, rgb(230, 230, 230),  rgb(230, 230, 230) 50%, rgb(144, 53, 219) 0%,  rgb(144, 53, 219));
+}
+        
+p{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+footer{
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+#contact-form{
+    width: 80%;
+    margin: 10px auto;
+}
+
+#contact-form label{
+    font-size: 1.3em;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 5px;
+}
+
+.input-contact{
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    font-size: 1.3em;
+    font-family: 'Quicksand', sans-serif ;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 10px;
+
+}
+#contact-form textarea{
+    max-width: none;
+    min-height: 200px;
+
+}
+#contact-form .btn-submit{
+    font-size: 1.2em;
+    padding: 5px 10px;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 5px;
+    background-color: white;
+    color: rgb(144, 53, 219);
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.212) 5px 5px 10px;
+
+}
+#contact-form .btn-submit:hover{
+    background-color: whitesmoke;
+}
+
+#btn-wa{
+    margin: 0 auto;
+    color: #00bb2D;
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.212) 5px 5px 10px;
+}
+#btn-wa:hover{
+    background-color: whitesmoke;
+}
+
+#wa-contact{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#wa-contact p{
+    color: white;
+    margin-bottom: 20px;
+}
+
+
